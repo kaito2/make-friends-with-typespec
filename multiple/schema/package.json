@@ -1,0 +1,22 @@
+{
+  "name": "schema",
+  "version": "0.1.0",
+  "type": "module",
+  "peerDependencies": {
+    "@typespec/compiler": "latest"
+  },
+  "devDependencies": {
+    "@typespec/compiler": "latest"
+  },
+  "private": true,
+  "dependencies": {
+    "@typespec/http": "^0.65.0",
+    "@typespec/openapi3": "^0.65.0"
+  },
+  "scripts": {
+    "gen:admin": "tsp compile --output-dir=./admin/gen --emit=@typespec/openapi3 ./admin",
+    "gen:admin:watch": "tsp compile --watch --output-dir=./admin/gen --emit=@typespec/openapi3 ./admin",
+    "gen:client": "tsp compile --output-dir=./client/gen --emit=@typespec/openapi3 ./client",
+    "gen:client:watch": "tsp compile --watch --output-dir=./client/gen --emit=@typespec/openapi3 ./client"
+  }
+}
