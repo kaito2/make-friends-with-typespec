@@ -10,12 +10,12 @@ using TypeSpec.OpenAPI;
 @server("https://api.example.com")
 namespace Admin;
 
-model Client {
+model TenantClient {
   name: string;
 }
 
-@route("/clients")
-namespace Clients {
-  op list(): Client[];
-  op read(@path id: Client): Client;
+@route("/tenant-clients")
+namespace TenantClients {
+  op list(): TenantClient[];
+  op read(@path id: TenantClient): TenantClient;
 }

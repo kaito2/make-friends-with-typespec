@@ -23,5 +23,5 @@ model Address {
 @route("/stores")
 namespace Stores {
   op list(): Store[];
-  op read(@path id: Store): Store;
+  op read(@path id: string): Store;
 }
