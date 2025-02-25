@@ -17,6 +17,7 @@
     "gen:admin": "tsp compile --output-dir=./admin/gen --emit=@typespec/openapi3 ./admin",
     "gen:admin:watch": "tsp compile --watch --output-dir=./admin/gen --emit=@typespec/openapi3 ./admin",
     "gen:client": "tsp compile --output-dir=./client/gen --emit=@typespec/openapi3 ./client",
-    "gen:client:watch": "tsp compile --watch --output-dir=./client/gen --emit=@typespec/openapi3 ./client"
+    "gen:client:watch": "tsp compile --watch --output-dir=./client/gen --emit=@typespec/openapi3 ./client",
+    "gen:all": "npm run gen:admin && npm run gen:client"
   }
 }
